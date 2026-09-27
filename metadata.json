@@ -1,0 +1,6 @@
+{
+  "name": "SmartAttend — University Attendance & Analytics Platform",
+  "description": "Smart attendance management and analytics platform for students, faculty, and administration with predictive risk engine, real-time tracking, and actionable insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

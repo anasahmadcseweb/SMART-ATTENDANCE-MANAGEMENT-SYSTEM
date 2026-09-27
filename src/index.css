@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #f8fafc;
+    --navy-text: #0f172a;
+    --primary-blue: #2563eb;
+    --soft-blue: #dbeafe;
+    --soft-mint: #dff7f2;
+    --teal-accent: #14b8a6;
+    --border-subtle: #e2e8f0;
+  }
+
+  .dark {
+    --bg-canvas: #0b1120;
+    --navy-text: #f8fafc;
+    --primary-blue: #3b82f6;
+    --soft-blue: rgba(59, 130, 246, 0.15);
+    --soft-mint: rgba(20, 184, 166, 0.15);
+    --teal-accent: #2dd4bf;
+    --border-subtle: #1e293b;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--navy-text);
+  }
+}
+
+/* Subtle grid pattern inspired by modern SaaS aesthetic */
+.bg-subtle-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+}
+
+.dark .bg-subtle-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Soft ambient mesh gradients */
+.bg-ambient-gradient {
+  background: radial-gradient(circle at 10% 10%, rgba(219, 234, 254, 0.5) 0%, transparent 45%),
+              radial-gradient(circle at 90% 15%, rgba(223, 247, 242, 0.6) 0%, transparent 40%),
+              radial-gradient(circle at 50% 90%, rgba(241, 245, 249, 0.8) 0%, transparent 50%);
+}
+
+.dark .bg-ambient-gradient {
+  background: radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+              radial-gradient(circle at 90% 15%, rgba(20, 184, 166, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 50% 90%, rgba(15, 23, 42, 0.9) 0%, transparent 50%);
+}
+
+/* Card aesthetics */
+.saas-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .saas-card {
+  background-color: #111827;
+  border: 1px solid #1f2937;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.saas-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  border-color: #cbd5e1;
+}
+
+.dark .saas-card-hover:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  border-color: #374151;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
